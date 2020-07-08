@@ -1,0 +1,29 @@
+hardware: []
+
+software:
+  - git
+
+services:
+  - ssh
+  - avahi
+
+enviroment:
+  gui_system: false
+
+hostfile: 
+  create: true
+  full: false
+
+kernel:
+  kernel_modules: true
+
+keyboard_model: pc105
+keyboard_layout: e3
+keyboard_variant: 'nodeadkeys'
+keyboard_options: 'terminate:ctrl_alt_bksp'
+keyboard_backspace: guess
+
+secure_ssh_config: false
+do_mount_filesystems: true
+do_software_upgrade: true
+do_ansible: false

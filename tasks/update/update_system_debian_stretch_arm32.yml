@@ -1,0 +1,13 @@
+---
+- name: Add repository for Debian Stretch 32bit
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  become: yes
+  with_items:
+    - deb http://mirrordirector.raspbian.org/raspbian/ stable main contrib non-free rpi firmware
+    - deb http://archive.raspberrypi.org/debian/ stretch main ui
+  when: 
+    - ansible_distribution == "Debian"
+    - ansible_distribution_release == "stretch"
+    - ansible_facts.userspace_bits == "32"

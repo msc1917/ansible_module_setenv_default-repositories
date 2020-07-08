@@ -1,0 +1,36 @@
+# Ansible managed
+127.0.0.1       localhost
+127.0.1.1       control		control.baikonur.at
+::1             localhost 	ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+
+192.168.96.1 	gateway		gateway.net.baikonur.at
+192.168.96.2 	wlan		wlan.net.baikonur.at
+192.168.96.10	switch00	switch00.net.baikonur.at
+192.168.96.11	switch01	switch01.net.baikonur.at
+192.168.96.12	switch02	switch02.net.baikonur.at
+192.168.96.13	switch03	switch03.net.baikonur.at
+192.168.96.14	switch04	switch04.net.baikonur.at
+192.168.96.15	switch05	switch05.net.baikonur.at
+192.168.96.17	switch07	switch07.net.baikonur.at
+192.168.96.18	switch08	switch08.net.baikonur.at
+192.168.96.19	switch09	switch09.net.baikonur.at
+192.168.96.199  observer	observer.baikonur.at
+192.168.97.205  ml1			ml1.baikonur.at
+192.168.97.206  ml2			ml2.baikonur.at
+192.168.97.207  ml3			ml3.baikonur.at
+192.168.96.208  jumphost	jumphost.baikonur.at
+192.168.96.209  testing		testing.baikonur.at
+192.168.96.211  docker01	docker01.kube.baikonur.at
+192.168.96.212  docker02	docker02.kube.baikonur.at
+192.168.96.213  docker03	docker03.kube.baikonur.at
+192.168.96.214  docker04	docker04.kube.baikonur.at
+192.168.96.215  docker05	docker05.kube.baikonur.at
+192.168.96.216  docker06	docker06.kube.baikonur.at
+192.168.96.217  docker07	docker07.kube.baikonur.at
+192.168.96.218  docker08	docker08.kube.baikonur.at
+192.168.96.219  docker09	docker09.kube.baikonur.at
+192.168.96.220  docker10	docker10.kube.baikonur.at
+192.168.96.221  docker11	docker11.kube.baikonur.at
+192.168.96.222  docker12	docker12.kube.baikonur.at

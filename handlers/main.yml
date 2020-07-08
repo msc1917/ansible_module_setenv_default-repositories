@@ -1,0 +1,41 @@
+---
+- name: dpkg-reconfigure keyboard-configuration
+  become: yes
+  command: /usr/sbin/dpkg-reconfigure -f noninteractive keyboard-configuration
+  when: ansible_os_family == 'Debian'
+
+- name: restart avahi-daemon
+  systemd:
+    name: avahi-daemon
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
+  become: yes
+  ignore_errors: yes
+
+- name: restart ssh
+  systemd:
+    name: ssh
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
+  become: yes
+  ignore_errors: yes
+
+- name: restart samba
+  systemd:
+    name: samba
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
+  become: yes
+  ignore_errors: yes
+
+- name: restart xrdp
+  systemd:
+    name: xrdp
+    daemon_reload: yes
+    state: restarted
+    enabled: yes
+  become: yes
+  ignore_errors: yes
