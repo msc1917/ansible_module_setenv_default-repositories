@@ -20,7 +20,7 @@
   with_items:
     - https://ftp-master.debian.org/keys/archive-key-10-security.asc
     - https://ftp-master.debian.org/keys/archive-key-10.asc
-    - https://packages.cloud.google.com/apt/doc/apt-key.gpg 
+    - https://packages.cloud.google.com/apt/doc/pat-key.gpg 
   when: 
     - ansible_distribution == "Debian"
     - ansible_distribution_release == "buster"
