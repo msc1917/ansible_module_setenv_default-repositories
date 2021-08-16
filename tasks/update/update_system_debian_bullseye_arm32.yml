@@ -1,0 +1,25 @@
+---
+- name: Add repository for Debian Bullseye 32bit
+  apt_repository:
+    repo: "{{ item }}"
+    state: present
+  become: yes
+  with_items:
+    - deb http://mirrordirector.raspbian.org/raspbian/ stable main contrib non-free rpi firmware
+  when: 
+    - ansible_distribution == "Debian"
+    - ansible_distribution_release == "bullseye"
+    - ansible_facts.userspace_bits == "32"
+
+- name: Register Keys for Debian Bullseye
+  apt_key:
+    url: "{{ item }}"
+    state: present
+  become: yes
+  with_items:
+    - https://ftp-master.debian.org/keys/archive-key-11-security.asc
+    - https://ftp-master.debian.org/keys/archive-key-11.asc
+    - https://packages.cloud.google.com/apt/doc/apt-key.gpg 
+  when: 
+    - ansible_distribution == "Debian"
+    - ansible_distribution_release == "bullseye"

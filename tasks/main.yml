@@ -22,3 +22,19 @@
     - ansible_distribution == "Debian"
     - ansible_distribution_release == "buster"
     - ansible_facts.userspace_bits == "64"
+
+- name: Setup Debian Bullseye ARM 32bit
+  include_tasks: update/update_system_debian_bullseye_arm32.yml
+  when: 
+    - ansible_facts.architecture is search("arm")
+    - ansible_distribution == "Debian"
+    - ansible_distribution_release == "bullseye"
+    - ansible_facts.userspace_bits == "32"
+
+- name: Setup Debian Bullseye ARM 64bit
+  include_tasks: update/update_system_debian_bullseye_arm64.yml
+  when: 
+    - ansible_facts.architecture is search("arm")
+    - ansible_distribution == "Debian"
+    - ansible_distribution_release == "bullseye"
+    - ansible_facts.userspace_bits == "64"
